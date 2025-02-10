@@ -4,6 +4,34 @@ O **Leaf** é um projeto inovador da **TechGreen**, criado para facilitar cálcu
 
 ---
 
+## 🌍 Visão
+
+- Educação e Conscientização Ambiental
+- Transformação Digital Sustentável
+- Impacto Social e Ambiental Positivo
+- Consultoria
+- Soluções personalizadas para cada Cliente
+
+---
+
+## 🎯 Missão
+
+- Promover Sustentabilidade com Eficiência e Impacto
+- Transformar Negócios para um Futuro Sustentável e Socialmente Justo
+- Converter Dados em Ações para um Futuro Sustentável
+- Capacitar Decisões Sustentáveis para Preservar o Planeta
+
+---
+
+## 🏆 Valores
+
+- Conscientizar
+- Educar 
+- Ajudar
+- Conservar
+
+---
+
 ## <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" alt="⚙" width="30" height="30"> Estrutura do Projeto
 
 📂 **CF (Código Fonte):** Contém todos os arquivos do código-fonte do aplicativo e do jogo.
@@ -36,9 +64,9 @@ O **Leaf** é um projeto inovador da **TechGreen**, criado para facilitar cálcu
 
 🚀 **Linguagem de Programação:** Java
 
-📚 **Netbeans**
+📚 **NetBeans**
 
-🗄 **Eclipse** 
+🗄 **Eclipse**
 
 🧩 **Figma**
 
@@ -51,4 +79,3 @@ O **Leaf** é um projeto inovador da **TechGreen**, criado para facilitar cálcu
 📧 **E-mail:** [techgreen741@gmail.com](mailto:techgreen741@gmail.com)
 
 🌍 Junte-se a nós e contribua para um mundo mais sustentável! 💚
-
