@@ -23,7 +23,7 @@ O **Leaf** é um projeto inovador da **TechGreen**, criado para facilitar cálcu
 ## 👥 Colaboradores
 
 ### 🎨 Designers
-- [Leanderson](https://github.com/LeonnMartins)
+- [Leandson](https://github.com/LeonnMartins)
 - [Enzo/Evellen](https://github.com/PderiMiel)
 
 ### 💻 Desenvolvedores
