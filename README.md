@@ -23,12 +23,12 @@ O **Leaf** é um projeto inovador da **TechGreen**, criado para facilitar cálcu
 ## 👥 Colaboradores
 
 ### 🎨 Designers
-- Designer 1
-- Designer 2
+- [Leanderson](https://github.com/LeonnMartins)
+- [Enzo/Evellen](https://github.com/PderiMiel)
 
 ### 💻 Desenvolvedores
-- Desenvolvedor 1
-- Desenvolvedor 2
+- [João Hallysson](https://github.com/Joao-Hallysson)
+- [Juni/Vitor Manoel](https://github.com/JuninMercadorias)
 
 ---
 
@@ -36,11 +36,13 @@ O **Leaf** é um projeto inovador da **TechGreen**, criado para facilitar cálcu
 
 🚀 **Linguagem de Programação:** Java
 
-📚 **Frameworks:** (Adicionar os frameworks utilizados)
+📚 **Netbeans**
 
-🗄 **Banco de Dados:** (Adicionar o banco de dados utilizado)
+🗄 **Eclipse** 
 
-🛠 **Outras Ferramentas:** (Adicionar outras ferramentas relevantes)
+🧩 **Figma**
+
+📋 **Trello**
 
 ---
 
