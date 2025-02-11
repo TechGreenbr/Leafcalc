@@ -74,6 +74,8 @@ O **Leaf** é um projeto inovador da **TechGreen**, criado para facilitar cálcu
 
 ▶️ **YouTube**
 
+🖌️ **Canva**
+
 ---
 
 ## 📩 Contato
