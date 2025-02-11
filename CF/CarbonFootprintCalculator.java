@@ -8,8 +8,6 @@ import java.awt.event.ActionListener;
 public class LoginScreen extends JFrame implements ActionListener {
 
     private final JLabel logoLabel;
-    private final JLabel companyNameLabel;
-    private final JLabel sloganLabel;
     private final JButton startButton;
 
     public LoginScreen() {
@@ -28,40 +26,34 @@ public class LoginScreen extends JFrame implements ActionListener {
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Margens
         mainPanel.setBackground(backgroundColor);
 
-        // Painel superior com a logo e o nome da empresa
-        JPanel topPanel = new JPanel();
-        topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
-        topPanel.setBackground(backgroundColor);
+        // Painel central para a logo e o botão
+        JPanel centerPanel = new JPanel();
+        centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
+        centerPanel.setBackground(backgroundColor);
 
         // Carregando a logo da empresa
-        ImageIcon logoIcon = new ImageIcon("CarbonFootprintCalculator/Icons/logo.png");
-        logoLabel = new JLabel(logoIcon);
-        logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        topPanel.add(logoLabel);
+        ImageIcon originalLogoIcon = new ImageIcon("src/Icons/Logo.png"); // Caminho correto para a logo
+        Image img = originalLogoIcon.getImage();
+        Image scaledImg = img.getScaledInstance(300, 195, Image.SCALE_SMOOTH); // Ajusta o tamanho da logo
+        ImageIcon scaledLogoIcon = new ImageIcon(scaledImg);
 
-        companyNameLabel = new JLabel("TECHGREEN", SwingConstants.CENTER);
-        companyNameLabel.setFont(new Font("Serif", Font.BOLD, 24));
-        companyNameLabel.setForeground(Color.BLACK);
-        companyNameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        topPanel.add(companyNameLabel);
+        logoLabel = new JLabel(scaledLogoIcon);
+        logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // Centraliza a logo
+        centerPanel.add(logoLabel);
 
-        sloganLabel = new JLabel("Transformando o futuro", SwingConstants.CENTER);
-        sloganLabel.setFont(new Font("Serif", Font.PLAIN, 16));
-        sloganLabel.setForeground(Color.BLACK);
-        sloganLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        topPanel.add(sloganLabel);
+        // Espaçamento entre a logo e o botão
+        centerPanel.add(Box.createVerticalStrut(20)); // Espaçamento de 20 pixels
 
-        mainPanel.add(topPanel, BorderLayout.CENTER);
-
-        // Painel inferior com o botão para iniciar a calculadora
-        JPanel bottomPanel = new JPanel();
-        bottomPanel.setBackground(backgroundColor);
+        // Botão para iniciar a calculadora
         startButton = new JButton("Iniciar Calculadora");
         startButton.setBackground(buttonColor);
         startButton.setForeground(textColor);
+        startButton.setAlignmentX(Component.CENTER_ALIGNMENT); // Centraliza o botão
         startButton.addActionListener(this);
-        bottomPanel.add(startButton);
-        mainPanel.add(bottomPanel, BorderLayout.SOUTH);
+        centerPanel.add(startButton);
+
+        // Adiciona o painel central ao painel principal
+        mainPanel.add(centerPanel, BorderLayout.CENTER);
 
         // Adiciona o painel principal à janela
         add(mainPanel);
