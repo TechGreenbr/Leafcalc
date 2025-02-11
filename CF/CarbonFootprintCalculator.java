@@ -34,7 +34,8 @@ public class LoginScreen extends JFrame implements ActionListener {
         topPanel.setBackground(backgroundColor);
 
         // Carregando a logo da empresa
-        ImageIcon logoIcon = new ImageIcon("CarbonFootprintCalculator/icons/logo.png");
+        ImageIcon logoIcon = new ImageIcon("CarbonFootprintCalculator/Icons/logo.png");
+        logoLabel = new JLabel(logoIcon);
         logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         topPanel.add(logoLabel);
 
