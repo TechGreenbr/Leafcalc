@@ -4,9 +4,88 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.RoundRectangle2D;
 
-public class CarbonFootprintCalculator extends JFrame implements ActionListener {
+public class LoginScreen extends JFrame implements ActionListener {
+
+    private final JLabel logoLabel;
+    private final JLabel companyNameLabel;
+    private final JLabel sloganLabel;
+    private final JButton startButton;
+
+    public LoginScreen() {
+        setTitle("TECHGREEN - Login");
+        setSize(500, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // Centraliza a janela na tela
+
+        // Definindo a paleta de cores
+        Color backgroundColor = new Color(240, 240, 240); // Cor de fundo
+        Color buttonColor = new Color(0, 120, 215); // Azul para o botão
+        Color textColor = Color.WHITE; // Cor do texto
+
+        // Painel principal com layout BorderLayout
+        JPanel mainPanel = new JPanel(new BorderLayout());
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Margens
+        mainPanel.setBackground(backgroundColor);
+
+        // Painel superior com a logo e o nome da empresa
+        JPanel topPanel = new JPanel();
+        topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
+        topPanel.setBackground(backgroundColor);
+
+        // Carregando a logo da empresa
+        ImageIcon logoIcon = new ImageIcon("caminho/para/sua/logo.png"); // Substitua pelo caminho da sua logo
+        logoLabel = new JLabel(logoIcon);
+        logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        topPanel.add(logoLabel);
+
+        companyNameLabel = new JLabel("TECHGREEN", SwingConstants.CENTER);
+        companyNameLabel.setFont(new Font("Serif", Font.BOLD, 24));
+        companyNameLabel.setForeground(Color.BLACK);
+        companyNameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        topPanel.add(companyNameLabel);
+
+        sloganLabel = new JLabel("Transformando o futuro", SwingConstants.CENTER);
+        sloganLabel.setFont(new Font("Serif", Font.PLAIN, 16));
+        sloganLabel.setForeground(Color.BLACK);
+        sloganLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        topPanel.add(sloganLabel);
+
+        mainPanel.add(topPanel, BorderLayout.CENTER);
+
+        // Painel inferior com o botão para iniciar a calculadora
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setBackground(backgroundColor);
+        startButton = new JButton("Iniciar Calculadora");
+        startButton.setBackground(buttonColor);
+        startButton.setForeground(textColor);
+        startButton.addActionListener(this);
+        bottomPanel.add(startButton);
+        mainPanel.add(bottomPanel, BorderLayout.SOUTH);
+
+        // Adiciona o painel principal à janela
+        add(mainPanel);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == startButton) {
+            // Fecha a tela de login e abre a calculadora
+            this.dispose();
+            CarbonFootprintCalculator calculator = new CarbonFootprintCalculator();
+            calculator.setVisible(true);
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            LoginScreen loginScreen = new LoginScreen();
+            loginScreen.setVisible(true);
+        });
+    }
+}
+
+class CarbonFootprintCalculator extends JFrame implements ActionListener {
 
     private final JLabel titleLabel;
     private final JLabel subtitleLabel;
@@ -131,6 +210,7 @@ public class CarbonFootprintCalculator extends JFrame implements ActionListener 
             options[i].setFocusPainted(false);
             options[i].setBorderPainted(false);
             options[i].setContentAreaFilled(false);
+            options[i].setPreferredSize(new Dimension(300, 40)); // Tamanho fixo para os botões
             options[i].addActionListener(this);
             optionGroup.add(options[i]);
             optionsPanel.add(options[i]);
@@ -255,12 +335,5 @@ public class CarbonFootprintCalculator extends JFrame implements ActionListener 
         } else {
             System.exit(0); // Fecha o programa
         }
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            CarbonFootprintCalculator calculator = new CarbonFootprintCalculator();
-            calculator.setVisible(true);
-        });
     }
 }
